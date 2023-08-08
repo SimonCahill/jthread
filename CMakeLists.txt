@@ -8,10 +8,10 @@ file(GLOB_RECURSE HEADERS FOLLOW_SYMLINKS ${CMAKE_CURRENT_SOURCE_DIR}/source/*.h
 
 set(INCLUDE_DIR ${CMAKE_CURRENT_BINARY_DIR}/include)
 
-file(MAKE_DIRECTORY ${INCLUDE_DIR})
+file(MAKE_DIRECTORY ${INCLUDE_DIR}/jthread)
 
 foreach (header ${HEADERS})
-    file(COPY ${header} DESTINATION ${INCLUDE_DIR})
+    file(COPY ${header} DESTINATION ${INCLUDE_DIR}/jthread)
 endforeach()
 
 add_library(${PROJECT_NAME} INTERFACE)
