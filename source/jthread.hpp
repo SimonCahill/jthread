@@ -1,6 +1,9 @@
 // -----------------------------------------------------
 // cooperative interruptable and joining thread:
 // -----------------------------------------------------
+#if __cplusplus > 201703L
+  #include <thread>
+#else
 #ifndef JTHREAD_HPP
 #define JTHREAD_HPP
 
@@ -172,3 +175,4 @@ inline void jthread::swap(jthread& t) noexcept {
 } // std
 
 #endif // JTHREAD_HPP
+#endif // __cplusplus > 201703L
